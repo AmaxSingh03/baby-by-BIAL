@@ -286,7 +286,7 @@ input::placeholder {
 
   @media (max-height: 812px) {
     .iphone-frame {
-      transform: scale(0.8); /* Reduz o tamanho do iPhone */
+      transform: scale(0.6); /* Reduz o tamanho do iPhone */
       transform-origin: center; /* Garante que o redimensionamento seja centralizado */
     }
   }
