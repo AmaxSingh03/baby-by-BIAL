@@ -1,0 +1,299 @@
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e5e5e5; /* Fundo cinza claro */
+    overflow: hidden; /* Remove a barra de rolagem */
+  }
+  
+  /* Estrutura do iPhone */
+  .iphone-frame {
+    width: 375px; /* Largura padrão do iPhone X */
+    height: 812px; /* Altura padrão do iPhone X */
+    background: #000;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; /* Garante que nada vaze para fora */
+  }
+  
+  /* Notch (recorte superior do iPhone) */
+  .iphone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 30px;
+    background: #000;
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas no notch */
+    z-index: 3; /* Fica abaixo do header */
+  }
+  
+  /* Botão Home (inferior) */
+  .iphone-frame::after {
+    content: '';
+    width: 60px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  
+  /* Tela do iPhone */
+  .screen {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header da App */
+.app-header {
+    background-color: #e77ba2; /* Header background color */
+    color: white;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Increased padding */
+    font-size: 27px; /* Increased font size */
+    position: relative;
+    z-index: 2;
+    height: 90px; /* Fixed height */
+   
+}
+
+/* Optional: Style for the header title */
+.header-title {
+    flex-grow: 1; /* Allow the title to take up available space */
+    text-align: center; /* Center the text */
+}
+  
+  
+  /* Conteúdo da App */
+  .app-content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto; /* Permite rolar o conteúdo se ultrapassar o espaço */
+  }
+  
+  /* Telas (inicialmente escondidas) */
+  .screen-content {
+    display: none;
+  }
+  
+  .screen-content.active {
+    display: block;
+  }
+  
+  /* Botões */
+  /* Botões (Existing Button Style) */
+button {
+    width: 100%; /* Full width for standard buttons */
+    padding: 10px;
+    margin: 10px 0;
+    background: #e77ba2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e77ba2;
+}
+
+/* New Button Style for Header Navigation */
+.button-header {
+    width: 10%; /* Full width */
+    
+   
+    background-color: #e77ba2;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.button-header:hover {
+    background-color: #e77ba2;/* Darker yellow on hover */
+}
+
+
+
+.button-with-image {
+    width: 30%;
+    background-color: transparent; /* Make the button background transparent */
+    border: none; /* Remove border */
+    
+    cursor: pointer; /* Add pointer cursor on hover */
+    outline: 3px solid #633fe6; /* Add an outline with color */
+    outline-offset: 1px; /* Optional: Adds space between the button and outline */
+}
+
+.button-with-image img {
+    width: 80px; /* Adjust the size of the image */
+    height: 80px;
+}
+  
+
+.button-with-big-image {
+    width: 40%;
+    background-color: transparent; /* Make the button background transparent */
+    border: none; /* Remove border */
+    
+    cursor: pointer; /* Add pointer cursor on hover */
+    outline: 3px solid #633fe6; /* Add an outline with color */
+    outline-offset: 1px; /* Optional: Adds space between the button and outline */
+}
+
+.button-with-big-image img {
+    width: 120px; /* Adjust the size of the image */
+    height: 120px;
+}
+
+.button-with-big-image:hover {
+    background-color: #ffffff;/* Darker yellow on hover */
+}
+
+.button-with-huge-image {
+    width: 90%;
+    background-color: transparent; /* Make the button background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor on hover */
+    
+}
+
+.button-with-huge-image img {
+    width: 250px; /* Adjust the size of the image */
+    height: 250px;
+}
+
+.button-with-huge-image:hover {
+    background-color: #ffffff;/* Darker yellow on hover */
+}
+
+.button-with-lit-image {
+    width: 30%;
+    background-color: transparent; /* Make the button background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add pointer cursor on hover */
+    
+}
+
+.button-with-lit-image img {
+    width: 80px; /* Adjust the size of the image */
+    height: 60px;
+}
+
+.button-with-lit-image:hover {
+    background-color: #ffffff;/* Darker yellow on hover */
+}
+
+
+
+
+.button-container {
+    display: flex;                /* Enable flexbox layout */
+    justify-content: center;      /* Center buttons horizontally */
+    gap: 20px;                    /* Add space between buttons */
+}
+  /* Texto adicional */
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    padding: 5px 0;
+    font-size: 14px;
+  }
+
+
+  form {
+    width: 100%; /* Full width within the container */
+    padding: 20px; /* Add some internal padding */
+    font-family: Arial, sans-serif; /* Match the font */
+}
+
+/* Center labels and inputs, and add space */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* Space between rows */
+}
+
+label {
+    flex: 1; /* Labels take equal space */
+    font-weight: bold;
+    color: #555; /* Subtle dark gray for text */
+    margin-right: 10px; /* Space between label and input */
+}
+
+/* Inputs */
+/* Inputs with placeholders */
+input {
+    flex: 1; /* Stretch to fill space */
+    padding: 10px; /* Add extra padding for placeholder visibility */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 11px;
+    font-family: Arial, sans-serif;
+    color: #000000; /* Text color */
+    outline: 1px solid #000000; /* Add an outline with color */
+    outline-offset: 1px; /* Optional: Adds space between the button and outline */
+}
+
+input::placeholder {
+    color: #aaa; /* Light gray placeholder text */
+    font-style: italic; /* Optional: Italicize the placeholder */
+}
+
+/* Row spacing for grouped inputs */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Space between inputs in the same row */
+}
+
+.row input {
+    flex: 1; /* Equal space for both inputs */
+}
+
+
+  @media (max-height: 812px) {
+    .iphone-frame {
+      transform: scale(0.8); /* Reduz o tamanho do iPhone */
+      transform-origin: center; /* Garante que o redimensionamento seja centralizado */
+    }
+  }
+  
+  @media (max-height: 700px) {
+    .iphone-frame {
+      transform: scale(0.8);
+    }
+  }
+  

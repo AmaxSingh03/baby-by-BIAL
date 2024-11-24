@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baby+ by BIAL</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="iphone-frame">
+    <div class="screen">
+        <header class="app-header">
+            <button class="button-header left" onclick="navigateTo('base')"></button>
+            <span class="header-title">WELCOME</span>
+            <button class="button-header right" onclick="navigateTo('base')"></button>
+        </header>
+      <main class="app-content">
+        <div id="base" class="screen-content active">
+            <center>
+                <button class="button-with-huge-image" onclick="navigateTo('home')">
+                    <img src="pics\mulher.png" alt=" Image" width="80%"/>
+                </button>
+                <h1 style="color: #e77ba2; font-weight: bold;">Baby+ <br> By BIAL</h1>
+            </center>
+            <br>
+            <div class="button-container">
+                 <img src="pics\riscas.png" alt="Button Image" width="80%" height="20%"/>
+                <button class="button-with-lit-image" onclick="window.open('https://www.bial.com/pt/', '_blank')">
+                    <img src="pics\logo-bial.jpg" alt="bial" />
+                </button>
+            </div>
+            
+        </div>
+        <div id="home" class="screen-content">
+            <center>
+            <img src="pics\mulher.png" alt="Button Image" />
+             <h1 style="color: #e77ba2; font-weight: bold;">Baby+ <br> By BIAL</h1>
+             <p style="color: #633fe6;">Sign in as:</p>
+            </center>
+            <div class="button-container">
+            <button class="button-with-image">
+                <img src="pics\doc.svg" alt="Button Image" />
+            </button>
+            <button class="button-with-image"onclick="navigateTo('signin')">
+                <img src="pics\gravida.svg" alt="Button Image" />
+            </button>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="pics\logo-bial.jpg" alt="bial" onclick="window.open('https://www.bial.com/pt/', '_blank')" width="30%"/>
+        </div>
+        <div id="signin" class="screen-content">
+            <center>
+            <button class="button-with-big-image">
+                <img src="pics\gravida.svg" alt="Button Image" />
+            </button>
+            <h3 style="color: #633fe6; font-weight: bold;">Pregnant Patient</h3>
+            </center>
+            
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="age" name="age" placeholder="Age" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="career" name="career" placeholder="Career" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="health-condition" name="health-condition" placeholder="Health condition*" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="lifestyle" name="lifestyle" placeholder="Lifestyle*" required>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="gestational-status" name="gestational-status" placeholder="Gestational status" required>
+            </div>
+            
+       
+          <button onclick="navigateTo('courses')">Continue</button>
+        </div>
+        <div id="courses" class="screen-content">
+            <div class="button-container">
+                <button class="button-with-big-image"onclick="navigateTo('tobemum')">
+                    <img src="pics\mom.png" alt="Button Image" />
+                </button>
+                <button class="button-with-big-image">
+                    <img src="pics\midnurse.png" alt="Button Image" />
+                </button>
+            </div>
+            <div class="button-container">
+                <button class="button-with-big-image">
+                    <img src="pics\nutri.png" alt="Button Image" />
+                </button>
+                <button class="button-with-big-image">
+                    <img src="pics\workout.png" alt="Button Image" />
+                </button>
+            </div>    
+            <div class="button-container">
+                <button class="button-with-big-image">
+                    <img src="pics\breastfeed.png" alt="Button Image" />
+                </button>
+                <button class="button-with-big-image">
+                    <img src="pics\other.png" alt="Button Image" />
+                </button>
+            </div>
+            <br>
+            <br>
+
+            <center>
+            <a style="color: #e77ba2; font-weight: bold;" href="https://www.bial.com/pt/">www.bial.com/pt</a>
+            </center>
+        </div>
+        <div id="tobemum" class="screen-content">
+            <img src="pics\rev.png" alt=" Image" width="100%"/>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <center>
+            <a style="color: #e77ba2; font-weight: bold;" href="https://www.bial.com/pt/">www.bial.com/pt</a>
+            </center>
+        </div>
+        <div id="maternai" class="screen-content">
+            <img src="pics\maternai.png" alt=" Image" width="100%"/>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
