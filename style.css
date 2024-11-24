@@ -293,7 +293,7 @@ input::placeholder {
   
   @media (max-height: 700px) {
     .iphone-frame {
-      transform: scale(0.8);
+      transform: scale(0.6);
     }
   }
   
